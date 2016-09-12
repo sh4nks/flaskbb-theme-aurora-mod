@@ -1,0 +1,11 @@
+{
+    "application": "flaskbb",
+    "identifier": "flaskbb_theme",
+    "name": "Aurora Website",
+    "author": "sh4nks",
+    "license": "BSD 3-Clause",
+    "website": "https://flaskbb.org",
+    "description": "The theme for the flaskbb forums. Based up on the Aurora Theme.",
+    "preview": "preview.png",
+    "version": "1.0.0"
+}
