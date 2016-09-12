@@ -1,7 +1,7 @@
 {
     "application": "flaskbb",
-    "identifier": "flaskbb_theme",
-    "name": "Aurora Website",
+    "identifier": "aurora_mod",
+    "name": "Aurora Modified",
     "author": "sh4nks",
     "license": "BSD 3-Clause",
     "website": "https://flaskbb.org",
