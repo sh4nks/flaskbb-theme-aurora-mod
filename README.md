@@ -1,5 +1,15 @@
 # INSTALLATION
 
+Clone it into your ``themes/`` folder and save it as ``aurora_mod``.
+
+For example, in FlaskBB's ``themes/`` folder, execute this command:
+
+```bash
+git clone https://github.com/sh4nks/flaskbb-theme-aurora-mod aurora_mod
+```
+
+# DEVELOPMENT
+
 Make sure that you have npm (nodejs) installed. You can get it from [
 here](https://nodejs.org).
 
