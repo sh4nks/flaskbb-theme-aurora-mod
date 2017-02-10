@@ -7,5 +7,9 @@
     "website": "https://flaskbb.org",
     "description": "The theme for the flaskbb forums. Based up on the Aurora Theme.",
     "preview": "preview.png",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "options": {
+        "GA_ENABLED": false,
+        "GA_TRACKING_ID": ""
+    }
 }
