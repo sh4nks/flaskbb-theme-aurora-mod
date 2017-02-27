@@ -227,7 +227,7 @@
 
         {% block javascript %}
         <!-- jquery and bootstrap and flaskbb.js -->
-        <script src="{{ theme_static('js/scripts.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/scripts.min.js') }}"></script>
         {% endblock %}
 
         {# for extra scripts in other templates. #}
