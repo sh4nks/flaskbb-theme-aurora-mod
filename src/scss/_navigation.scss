@@ -1,27 +1,3 @@
-/* topnav */
-.topnav {
-    .navbar-brand {
-        color: #3276b1;
-    }
-    .navbar-nav > li > a {
-        color: #3276b1;
-    }
-
-    .navbar-nav > li > a:hover,
-    .navbar-nav > li > a:focus {
-        color: #3276b1;
-        background-color: #e7e7e7;
-    }
-
-    .navbar-nav > .active > a,
-    .navbar-nav > .active:hover > a,
-    .navbar-nav > .active:focus > a {
-        color: #3276b1;
-        background-color: #e7e7e7;
-    }
-}
-
-
 /* The private messages in the main navbar */
 .dropdown-messages {
     min-width: 20em;
@@ -80,9 +56,20 @@
 .nav-sidebar {
     width: 100%;
     padding: 0;
+
     a {
         color: $navigation-color;
     }
+
+    li.nav-header {
+        position: relative;
+        display: block;
+        padding: 10px 7.5px;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
     .active a {
         cursor: default;
         background-color: $navigation-bg;

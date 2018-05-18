@@ -4,16 +4,6 @@ html {
     min-height: 100%;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-
 body {
     // Margin bottom by footer height
     margin-bottom: 60px;
@@ -28,23 +18,15 @@ body {
 .flaskbb-footer {
     position: absolute;
     bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
+    // Set the fixed height of the footer here
     height: 60px;
-    padding: 20px 0;
-    background-color: #333333;
-
-    .copyright,
-    .made-in,
-    .powered-by {
-        margin: 0;
-    }
+    width: 100%;
+    // use the same width as container
+    //padding-top: 1em;
 }
 
-
 .flaskbb-layout {
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .flaskbb-header {
@@ -108,6 +90,10 @@ p.flaskbb-stats {
 
 .inline-form {
     display: inline;
+}
+
+.form {
+    padding-bottom: 1.5em;
 }
 
 .cheatsheet {
