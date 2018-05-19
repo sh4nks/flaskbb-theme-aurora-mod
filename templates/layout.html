@@ -179,12 +179,21 @@
             <footer class="flaskbb-footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div class="text-muted text-left">{{ flaskbb_config["PROJECT_COPYRIGHT"] | safe }}</div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <p class="copyright text-muted small pull-left">
+                                &copy; 2013 - <script type="text/javascript">document.write(new Date().getFullYear());</script> <a href="https://flaskbb.org">FlaskBB Team</a>
+                            </p>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div class="text-muted text-right">powered by <a href="https://flaskbb.org">FlaskBB</a></div>
-                            <div class="text-muted text-right">&copy; 2013 - {{ now.year }} <a href="https://flaskbb.org">FlaskBB Team</a></div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <p class="made-in text-muted small" style="text-align: center">
+                                <i style="color: white" class="fa fa-fw fa-code"></i> with
+                                <i style="color: red" class="fa fa-fw fa-heart"></i> on Earth
+                            </p>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <p class="powered-by text-muted small pull-right">
+                                powered by <a href="https://flaskbb.org">FlaskBB</a>
+                            </p>
                         </div>
                     </div>
                 </div>

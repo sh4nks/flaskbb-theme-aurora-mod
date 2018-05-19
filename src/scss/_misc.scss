@@ -4,6 +4,16 @@ html {
     min-height: 100%;
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 body {
     // Margin bottom by footer height
     margin-bottom: 60px;
@@ -23,6 +33,15 @@ body {
     width: 100%;
     // use the same width as container
     //padding-top: 1em;
+
+    padding: 20px 0;
+    background-color: #333333;
+    .copyright,
+    .made-in,
+    .powered-by {
+        margin: 0;
+    }
+
 }
 
 .flaskbb-layout {
