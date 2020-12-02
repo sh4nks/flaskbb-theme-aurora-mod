@@ -26,6 +26,8 @@
         <link rel="stylesheet" href="{{ theme_static('css/styles.css') }}">
         <!-- lato font -->
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+        <!-- emoji -->
+        <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.5"></script>
         {% endblock %}
 
         {# for extra stylesheets. e.q. a template has to add something #}
@@ -99,47 +101,19 @@
                         <!-- navbar left -->
                         <ul class="nav navbar-nav forum-nav">
                             {%- from theme("macros.html") import is_active, topnav with context -%}
-                            {{ emit_event("before-first-navigation-element") }}
 
+                            {{ run_hook("flaskbb_tpl_navigation_before") }}
                             {{ topnav(endpoint='forum.index', name=_('Forum'), icon='fa fa-comment', active=active_forum_nav) }}
                             {{ topnav(endpoint='forum.memberlist', name=_('Memberlist'), icon='fa fa-user') }}
                             {{ topnav(endpoint='forum.search', name=_('Search'), icon='fa fa-search') }}
-
-                            {{ emit_event("after-last-navigation-element") }}
+                            {{ run_hook("flaskbb_tpl_navigation_after") }}
                         </ul>
 
                         <!-- navbar right -->
                         <ul class="nav navbar-nav navbar-right">
-
                             {% if current_user and current_user.is_authenticated %}
-                            <!-- Inbox -->
-                            <li class="dropdown {{ is_active('message.inbox') }}">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <span class="fa fa-envelope fa-fw"></span> {% trans %}Inbox{% endtrans %}
-                                    {% if current_user.unread_count > 0 %}
-                                    <span class="label label-danger">{{ current_user.unread_count }}</span>
-                                    {% else %}
-                                    <span class="label label-info">{{ current_user.unread_count }}</span>
-                                    {% endif %}
-                                </a>
-                                <ul class="dropdown-menu dropdown-messages">
-                                    {% for message in current_user.unread_messages %}
-                                    <li>
-                                        <a href="{{ url_for('message.view_conversation', conversation_id=message.id) }}">
-                                            <div>
-                                                <span class="author-name">{{ message.from_user.username }}</span> <span class="pull-right text-muted">{{ message.last_message.date_created|time_since }}</span>
-                                                <div class="message-subject">{{ message.subject }}</div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    {% else %}
-                                    <li><a href="#">No unread messages.</a></li>
-                                    {% endfor %}
-                                    <li class="divider"></li>
-                                    <li><a href="{{ url_for('message.inbox') }}"><span class="fa fa-envelope fa-fw"></span> {% trans %}Inbox{% endtrans %}</a></li>
-                                    <li><a href="{{ url_for('message.new_conversation') }}"><span class="fa fa-pencil fa-fw"></span> {% trans %}New Message{% endtrans %}</a></li>
-                                </ul>
-                            </li>
+
+                            {{ run_hook("flaskbb_tpl_user_nav_loggedin_before") }}
 
                             <!-- User Menu -->
                             <li>
@@ -162,6 +136,9 @@
                                     </ul>
                                 </div>
                             </li>
+
+                            {{ run_hook("flaskbb_tpl_user_nav_loggedin_after") }}
+
                             {% else %}
                             <!-- Not logged in - Login/Register -->
                             <li>
@@ -204,7 +181,7 @@
                     <div class="row">
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                             <p class="copyright text-muted small pull-left">
-                                &copy; 2013 - 2017 <a href="https://flaskbb.org">FlaskBB Team</a>
+                                &copy; 2013 - <script type="text/javascript">document.write(new Date().getFullYear());</script> <a href="https://flaskbb.org">FlaskBB Team</a>
                             </p>
                         </div>
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">

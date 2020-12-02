@@ -21,7 +21,6 @@
     }
 }
 
-
 /* The private messages in the main navbar */
 .dropdown-messages {
     min-width: 20em;
@@ -80,9 +79,20 @@
 .nav-sidebar {
     width: 100%;
     padding: 0;
+
     a {
         color: $navigation-color;
     }
+
+    li.nav-header {
+        position: relative;
+        display: block;
+        padding: 10px 7.5px;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
     .active a {
         cursor: default;
         background-color: $navigation-bg;
